@@ -28,8 +28,6 @@ More information here: http://angular.github.io/protractor/#/
 **/
 describe('Test a list of urls', function() {
 
-    var ptor = protractor.getInstance();
-
     // List of urls to test often taken from router
     // This could be set in the config to clean things up
     // also can add other values like title and test them
@@ -84,14 +82,14 @@ describe('Test a list of urls', function() {
                 // TODO: this should be a helper method
                 // that checks a javascript flag or ui element for when all loading is complete
                 // for the sake of this demo we use sleep 2 seconds delay before running our tests
-                ptor.sleep(2000);
+                browser.sleep(2000);
 
                 // log out the url to help with debugging
                 console.log('\n» ' + item.url);
                 
                 // Correct page loads
                 browser.getCurrentUrl().then(function(actualUrl) {
-                  expect(actualUrl).toBe(ptor.baseUrl + item.url);
+                  expect(actualUrl).toBe(browser.baseUrl + item.url);
                 });
 
             });
