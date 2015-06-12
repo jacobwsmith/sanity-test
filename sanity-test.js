@@ -32,19 +32,47 @@ describe('Test a list of urls', function() {
     // This could be set in the config to clean things up
     // also can add other values like title and test them
     var list = [{
-        url: '/index.html'
+        url: '/'
     }, {
-        url: '/about.html'
+        url: '/company/'
     }, {
-        url: '/services.html'
+        url: '/company/management/'
     }, {
-        url: '/our-work.html'
+        url: '/blog/'
     }, {
-        url: '/press-coverage.html'
+        url: '/in-the-news/'
     }, {
-        url: '/connect-map.html'
+        url: '/company/careers/'
     }, {
-        url: '/careers.html'
+        url: '/company/contact/'
+    }, {
+        url: "/spark/"
+    }, {
+        url: "/spark/who-we-serve/"
+    }, {
+        url: "/spark/enhance/"
+    }, {
+        url: "/spark/enlight/"
+    }, {
+        url: "/spark/engage/"
+    }, {
+        url: "/spark/sorenson-spark-video-codec/"
+    }, {
+        url: "/squeeze/"
+    }, {
+        url: "/squeeze/who-we-serve/"
+    }, {
+        url: "/squeeze/squeeze-desktop/"
+    }, {
+        url: "/squeeze/squeeze-server/"
+    }, {
+        url: "/squeeze/stream/"
+    }, {
+        url: "/squeeze/squeeze-360/"
+    }, {
+        url: "/squeeze/resellers/"
+    }, {
+        url: "/support/"
     }];
 
     // testing a non-angular page
@@ -86,10 +114,10 @@ describe('Test a list of urls', function() {
 
                 // log out the url to help with debugging
                 console.log('\n» ' + item.url);
-                
+
                 // Correct page loads
                 browser.getCurrentUrl().then(function(actualUrl) {
-                  expect(actualUrl).toBe(browser.baseUrl + item.url);
+                    expect(actualUrl).toBe(browser.baseUrl + item.url);
                 });
 
             });
