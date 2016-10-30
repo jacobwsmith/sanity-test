@@ -1,5 +1,7 @@
 # sanity-test
 
+[![No Maintenance Intended](http://unmaintained.tech/badge.svg)](http://unmaintained.tech/)
+
 Sanity Test
 
 WHAT:
